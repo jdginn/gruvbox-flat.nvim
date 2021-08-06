@@ -42,7 +42,7 @@ function M.setup(config)
     CursorLineNr = { fg = c.purple }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { fg = util.lighten(c.purple, 0.95), style = "bold" }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = c.fg_dark, style = "bold" }, -- 'showmode' message (e.g., "-- INSERT -- ")
-    MsgArea = { fg = c.fg_dark }, -- Area for messages and cmdline
+    MsgArea = { fg = c.fg_light}, -- Area for messages and cmdline
     -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = c.blue }, -- |more-prompt|
     NonText = { fg = c.bg_highlight }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
@@ -209,22 +209,22 @@ function M.setup(config)
     TSField = { fg = c.aqua }, -- For fields.
     -- TSFloat             = { };    -- For floats.
     -- TSFunction          = { };    -- For function (calls and definitions).
-    -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
+    TSFuncBuiltin       = { fg = c.orange };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     TSInclude = { fg = c.blue }, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
     TSKeyword = { fg = c.purple, style = config.keywordStyle }, -- For keywords that don't fall in previous categories.
-    TSKeywordFunction = { fg = c.purple, style = config.functionStyle }, -- For keywords used to define a fuction.
+    TSKeywordFunction = { fg = c.red, style = config.functionStyle }, -- For keywords used to define a fuction.
     TSLabel = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
     TSNamespace = { fg = c.red }, -- For identifiers referring to modules and namespaces.
-    -- TSNone              = { };    -- TODO: docs
-    -- TSNumber            = { };    -- For all numbers
-    TSOperator = {fg = util.darken(c.orange, 0.85) }, -- For any operator: `+`, but also `->` and `*` in C.
+    TSNone              = { fg = c.orange };    -- TODO: docs
+    TSNumber            = { fg = c.purple };    -- For all numbers
+    TSOperator = {fg = util.darken(c.fg_light, 0.85) }, -- For any operator: `+`, but also `->` and `*` in C.
     TSParameter = { fg = c.red }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
     TSProperty = { fg = c.red }, -- Same as `TSField`.
-    TSPunctDelimiter = { fg = c.red }, -- For delimiters ie: `.`
-    TSPunctBracket = { fg = util.darken(c.orange, 0.85) }, -- For brackets and parens.
+    TSPunctDelimiter = { fg = c.fg_light }, -- For delimiters ie: `.`
+    TSPunctBracket = { fg = util.darken(c.fg_light, 0.85) }, -- For brackets and parens.
     TSPunctSpecial = { fg = util.darken(c.orange, 0.85) }, -- For special punctutation that does not fall in the catagories before.
     -- TSRepeat            = { };    -- For keywords related to loops.
     -- TSString            = { };    -- For strings.
@@ -232,7 +232,7 @@ function M.setup(config)
     TSStringEscape = { fg = c.red }, -- For escape characters within a string.
     -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
     -- TSType              = { };    -- For types.
-    -- TSTypeBuiltin       = { };    -- For builtin types.
+    -- TSTypeBuiltin       = { };    -- Ffg = c.orange or builtin types.
     TSVariable = { style = config.variableStyle }, -- Any variable name that does not have another highlight.
     TSVariableBuiltin = { fg = c.aqua }, -- Variable names that are defined by the languages, like `this` or `self`.
 
