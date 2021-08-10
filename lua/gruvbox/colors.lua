@@ -23,7 +23,7 @@ function M.setup(config)
     bg_highlight = "#5a524c",
     fg = "#d4be98",
     fg_light = "#ddc7a1",
-    fg_dark = "#d4be98",
+    fg_dark = "#282828",
     tree_normal = "#aa9987",
     comment = "#7c6f64",
     fg_gutter = "#5a524c",
@@ -53,7 +53,7 @@ function M.setup(config)
 
   -- set the background to hard
   elseif vim.g.gruvbox_flat_style == "hard" then
-    colors.bg = "#1d2021"
+    colors.bg = "#1c1c1c"
     colors.bg2 ="#17191a"
     colors.bg_highlight = "#3c3836"
     colors.line_cursor = util.lighten(colors.bg, 0.97) -- util.darken("#282828", 0.90)
@@ -61,6 +61,7 @@ function M.setup(config)
     colors.prompt_border = "#45403d"
     colors.bg_visual = "#3c3836"
     colors.comment = "#6a635d"
+    colors.green = "#b8bb26"
   end
 
   util.bg = colors.bg
@@ -90,7 +91,7 @@ function M.setup(config)
   colors.bg_sidebar = config.darkSidebar and colors.bg2 or colors.bg
   colors.bg_float = config.darkFloat and colors.bg2 or colors.bg
 
-  colors.bg_search = colors.bg_highlight -- Disabled
+  colors.bg_search = colors.yellow -- Disabled
   colors.fg_search = colors.fg -- Disabled
   colors.fg_sidebar = colors.fg_dark
 
