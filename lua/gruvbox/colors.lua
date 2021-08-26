@@ -21,14 +21,15 @@ function M.setup(config)
     line_cursor = "#45403d",
     prompt_border = "#ddc7a1",
     bg_highlight = "#5a524c",
-    fg = "#d4be98",
-    fg_light = "#ddc7a1",
+    fg = "#ebdbb2",
+    fg_light = "#fbf1c7",
     fg_dark = "#282828",
     tree_normal = "#aa9987",
     comment = "#7c6f64",
     fg_gutter = "#5a524c",
     dark5 = "#5a524c",
     blue = "#7daea3",
+    gray = "#383837",
     aqua = "#89b482",
     purple = "#d3869b",
     orange = "#e78a4e",
@@ -60,8 +61,9 @@ function M.setup(config)
     colors.border = colors.bg_highlight
     colors.prompt_border = "#45403d"
     colors.bg_visual = "#3c3836"
-    colors.comment = "#6a635d"
+    colors.comment = "#86868f"
     colors.green = "#b8bb26"
+    colors.fg_gutter = "#7f7f7f"
   end
 
   util.bg = colors.bg
