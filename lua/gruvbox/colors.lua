@@ -23,7 +23,7 @@ function M.setup(config)
     bg_highlight = "#5a524c",
     fg = "#ebdbb2",
     fg_light = "#fbf1c7",
-    fg_dark = "#282828",
+    fg_dark = "#686868",
     tree_normal = "#aa9987",
     comment = "#7c6f64",
     fg_gutter = "#5a524c",
