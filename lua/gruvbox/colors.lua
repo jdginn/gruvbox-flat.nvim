@@ -40,7 +40,7 @@ function M.setup(config)
     red = "#ea6962",
     red1 = "#c14a4a",
     black = "#1d2021",
-    git = { delete = "#c14a4a", add = "#6f8352", change = "#b47109", bg_red = "#ae5858" },
+    git = { delete = "#c14a4a", add = "#a9b665", change = "#d3869b", bg_red = "#ae5858" },
     gitSigns = { delete = "#ae5858", add = "#6f8352", change = "#a96b2c" },
   }
 
@@ -52,10 +52,10 @@ function M.setup(config)
     colors.line_cursor = "#32302f"
     colors.prompt_border = "#45403d"
 
-  -- set the background to hard
+    -- set the background to hard
   elseif vim.g.gruvbox_flat_style == "hard" then
     colors.bg = "#1c1c1c"
-    colors.bg2 ="#17191a"
+    colors.bg2 = "#17191a"
     colors.bg_highlight = "#3c3836"
     colors.line_cursor = util.lighten(colors.bg, 0.97) -- util.darken("#282828", 0.90)
     colors.border = colors.bg_highlight
@@ -69,10 +69,13 @@ function M.setup(config)
   util.bg = colors.bg
 
   colors.diff = {
-    add = util.darken(colors.git.add, 0.15),
-    delete = util.darken(colors.git.delete, 0.15),
-    change = util.darken(colors.git.change, 0.15),
-    text = colors.fg_gutter,
+    add = colors.green,
+    delete = colors.red,
+    change = colors.bg_visual,
+    change_fg = colors.fg,
+    text = colors.reverse,
+    fg = colors.black,
+    hl = colors.yellow,
   }
 
   colors.gitSigns = {
